@@ -1,0 +1,125 @@
+.category-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0px 80px;
+}
+
+.FullClass {
+    /* background: linear-gradient(120deg, #3b60af, #3b60af); */
+    background-size: cover;
+}
+
+.FullClass .Heading {
+    text-align: center;
+    padding: 70px 0px;
+    color: black;
+    font-weight: normal;
+}
+
+.category-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.category-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border-radius: 10px;
+}
+
+.category-card-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+
+.category-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.category-card:hover .category-card-img {
+    transform: scale(1);
+    filter: blur(3px);
+}
+
+.category-card:hover .category-card-title {
+    opacity: 1;
+}
+
+.Image-full-bags {
+    background-image: url('../Images/HomePage-Main1/HomePage-Second.avif');
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Full screen height for large screens */
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: center center;
+    /* Center the image */
+    margin-top: 70px;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1200px) {
+    .category-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Image-full-bags {
+        height: 80vh;
+        /* Slightly smaller height */
+        background-position: center top;
+        /* Focus on the top of the image */
+    }
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .category-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Image-full-bags {
+        height: 60vh;
+        /* Reduce the height for smaller screens */
+        background-position: center;
+        /* Adjust focus to the center */
+    }
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 576px) {
+    .category-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .Image-full-bags {
+        height: 50vh;
+        /* Even smaller height for mobile */
+        background-position: top center;
+        /* Focus on the most relevant part */
+    }
+}

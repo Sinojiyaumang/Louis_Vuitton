@@ -1,0 +1,179 @@
+/* General Container Adjustments */
+.men-shoes-page {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+/* Filter Buttons */
+.filterButton {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.filterButton button {
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.filterButton button:hover {
+    transform: scale(1.05);
+}
+
+.filterButton img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.filterButton img:hover {
+    transform: scale(1.1);
+}
+
+.filterButton p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.category-dropdown {
+    display: none;
+    width: 100%;
+}
+
+.category-dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Posters */
+.category-poster {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    margin-bottom: 20px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.category-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-text h6 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 16px;
+}
+
+/* Product Grid */
+.men-shoes-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.men-shoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.shoe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.shoe-card:hover {
+    transform: translateY(-5px);
+}
+
+.shoe-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.shoe-name {
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+    color: #444;
+    font-weight: normal;
+    text-align: start;
+}
+
+.shoe-price {
+    font-size: 13px;
+    margin: 3px 0 10px 10px;
+    color: #777;
+    text-align: start;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filterButton {
+        flex-direction: column;
+    }
+
+    .filterButton img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .overlay-text h6 {
+        font-size: 18px;
+    }
+
+    .overlay-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-poster {
+        height: 40vh;
+    }
+
+    .shoe-card {
+        padding: 5px;
+    }
+
+    .shoe-name {
+        font-size: 14px;
+    }
+
+    .shoe-price {
+        font-size: 12px;
+    }
+}

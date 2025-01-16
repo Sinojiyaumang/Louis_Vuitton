@@ -1,0 +1,305 @@
+/* General container adjustments for responsiveness */
+.accessories-page,
+.accessories-page-container,
+.accessories-page-category-poster {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.accessories-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Grid layout for accessory cards */
+.accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for each accessory card */
+.accessory-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.accessory-card:hover {
+    transform: translateY(-5px);
+}
+
+.accessory-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Accessory name and price styling */
+.accessory-name {
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+    color: #444;
+    font-weight: normal;
+    text-align: start;
+}
+
+.accessory-price {
+    font-size: 13px;
+    margin: 3px 0 10px 10px;
+    color: #777;
+    text-align: start;
+}
+
+/* Filter Buttons */
+.filterButton {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.filterButton div {
+    text-align: center;
+}
+
+.filterButton p {
+    font-family: "Louis Vuitton N W01 Regular";
+}
+
+.filterButton button {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.filterButton img {
+    width: 144px;
+    height: 144px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.filterButton img:hover {
+    transform: scale(1.1);
+}
+
+.filterButton p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+/* New Dropdown Styling for category options */
+.category-dropdown {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.category-dropdown select {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.category-dropdown select:hover {
+    background-color: #e0e0e0;
+}
+
+.category-dropdown select:focus {
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Poster Image adjustments for background */
+.category-poster,
+.poster-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    display: flex;
+    align-items: end;
+}
+
+/* Overlay text for poster images */
+.overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    z-index: 1;
+    padding: 20px;
+    width: 30%;
+    left: 3%;
+    bottom: 5%;
+}
+
+.overlay-text h6 {
+    font-size: 30px;
+    margin: 0px 0px 16px;
+    font-weight: normal;
+}
+
+.overlay-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .overlay-text {
+        font-size: 1.7rem;
+        width: 50%;
+        left: 5%;
+    }
+
+    .overlay-text h6 {
+        font-size: 2rem;
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem;
+    }
+
+    .accessories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .accessory-name {
+        font-size: 1.2rem;
+    }
+
+    .accessory-price {
+        font-size: 1rem;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+    .filterButton {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .filterButton button {
+        width: 180px;
+        height: auto;
+        border: 1px solid black;
+    }
+
+    .filterButton button:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .filterButton img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .overlay-text {
+        font-size: 1.5rem;
+        width: 70%;
+        left: 15%;
+        bottom: 10%;
+    }
+
+    .overlay-text h6 {
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 1.1rem;
+    }
+
+    .accessories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accessory-name {
+        font-size: 1.1rem;
+    }
+
+    .accessory-price {
+        font-size: 0.9rem;
+    }
+}
+
+/* Very small screens (Mobile phones) */
+@media (max-width: 600px) {
+
+    .filterButton img{
+        display: none;
+    }
+
+    .category-dropdown {
+        display: block;
+    }
+
+    .category-dropdown select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .overlay-text {
+        font-size: 1.3rem;
+        left: 5%;
+        width: 90%;
+        bottom: 15%;
+    }
+
+    .overlay-text h6 {
+        font-size: 1.2rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+
+    .accessory-name {
+        font-size: 1rem;
+    }
+
+    .accessory-price {
+        font-size: 0.8rem;
+    }
+}

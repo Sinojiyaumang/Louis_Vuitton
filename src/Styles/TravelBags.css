@@ -1,0 +1,85 @@
+/* General container adjustments for responsiveness */
+.travel-bags-page,
+.travel-bags-category-poster,
+.travel-bags-container {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+/* Filter Buttons */
+.travel-bags-filter-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.travel-bags-category-dropdown select {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.travel-bags-category-dropdown select:hover {
+    background-color: #e0e0e0;
+}
+
+/* Poster Video */
+.travel-bags-category-poster video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Grid layout for product cards */
+.travel-bags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.travel-bag-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.travel-bag-card:hover {
+    transform: translateY(-5px);
+}
+
+.travel-bag-image {
+    width: 100%;
+    height: auto;
+}
+
+.travel-bag-name {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #444;
+    text-align: start;
+}
+
+.travel-bag-price {
+    font-size: 14px;
+    color: #777;
+    text-align: start;
+}

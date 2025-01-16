@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Video Styling */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    display: none;
+}
+
+/* Text Overlay */
+.bg-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bg-text p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.bg-text .FestiveGift {
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.him-her {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.him-her a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 2px solid white;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 700px) {
+    .bg-video {
+        display: none;
+        /* Hide the video on smaller screens */
+    }
+
+    .bg-image {
+        display: block;
+        /* Show the fallback image */
+    }
+
+    .bg-text {
+        font-size: 32px;
+        /* Adjust text size for smaller screens */
+    }
+
+    .bg-text .FestiveGift {
+        font-size: 28px;
+    }
+
+    .him-her a {
+        font-size: 15px;
+        /* Adjust link size */
+    }
+}

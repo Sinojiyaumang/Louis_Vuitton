@@ -1,0 +1,199 @@
+/* Main container styling */
+.scarves-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0px 80px;
+}
+
+.image-full-scarves {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.scarves-title {
+    font-size: 36px;
+    font-weight: 500;
+    padding: 20px 0px 70px 0px;
+    letter-spacing: 1px;
+}
+
+.scarves-subtitle {
+    padding-top: 70px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #777;
+}
+
+/* Product Grid */
+.scarves-grid {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    animation: slide 10s linear infinite;
+    /* Slower animation */
+    will-change: transform;
+}
+
+/* Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Individual Product Card */
+.scarf-card {
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.scarf-card:hover {
+    transform: scale(1.05);
+}
+
+/* Like Icon */
+.wish-icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 18px;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.wish-icon:hover {
+    color: #ff2e2e;
+}
+
+.scarf-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex: 1;
+}
+
+.scarf-info {
+    width: 100%;
+    padding: 0px 0;
+    background-color: #fff;
+    text-align: left;
+}
+
+.scarf-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.scarf-price {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Buttons for Him and Her */
+.button-link {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-link button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+    font-family: "Louis Vuitton N W01 Regular";
+}
+
+.button-link button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .scarf-card {
+        flex: 0 0 45%;
+        max-width: 45%;
+        height: 200px;
+    }
+
+    .scarf-image {
+        height: 120px;
+    }
+
+    .wish-icon {
+        font-size: 16px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .button-link {
+        flex-direction: column;
+        /* Stack buttons vertically */
+        gap: 20px;
+    }
+
+    .button-link button {
+        width: 100%;
+        /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .scarf-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .scarf-image {
+        height: 120px;
+    }
+
+    .wish-icon {
+        font-size: 16px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .button-link {
+        flex-direction: column;
+        /* Stack buttons vertically */
+        gap: 15px;
+        /* Slightly smaller gap */
+    }
+
+    .button-link button {
+        width: 100%;
+        /* Full width for small screens */
+    }
+}

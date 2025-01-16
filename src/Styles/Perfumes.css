@@ -1,0 +1,366 @@
+/* General container adjustments for responsiveness */
+.perfume-page-1,
+.perfume-page-2,
+.perfume-page-3,
+.perfume-page-category-poster {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+
+.perfume-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Grid layout for bag cards */
+.perfume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for each bag card */
+.perfume-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.perfume-card:hover {
+    transform: translateY(-5px);
+}
+
+.perfume-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Bag name and price styling */
+.perfume-name {
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+    color: #444;
+    font-weight: normal;
+    text-align: start;
+}
+
+.perfume-price {
+    font-size: 13px;
+    margin: 3px 0 10px 10px;
+    color: #777;
+    text-align: start;
+}
+
+/* Filter Buttons */
+.perfume-page-filterButton {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.perfume-page-filterButton div {
+    text-align: center;
+}
+
+.perfume-page-filterButton p {
+    font-family: "Louis Vuitton N W01 Regular";
+}
+
+.perfume-page-filterButton button {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.perfume-page-filterButton img {
+    width: 144px;
+    height: 144px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.perfume-page-filterButton img:hover {
+    transform: scale(1.1);
+}
+
+.perfume-page-filterButton p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+/* New Dropdown Styling for category options */
+.perfume-page-category-dropdown {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style for the select element */
+.perfume-page-category-dropdown select {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.perfume-page-category-dropdown select:hover {
+    background-color: #e0e0e0;
+}
+
+.perfume-page-category-dropdown select:focus {
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Poster Image adjustments for background */
+.perfume-page-category-poster,
+.perfume-page-poster-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    display: flex;
+    align-items: end;
+}
+
+/* Overlay text for poster images */
+.perfume-page-overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: left;
+    z-index: 1;
+    padding: 20px;
+    width: 30%;
+    left: 3%;
+    bottom: 5%;
+}
+
+.perfume-page-overlay-text h6 {
+    font-size: 30px;
+    margin: 0px 0px 16px;
+    font-weight: normal;
+}
+
+.perfume-page-overlay-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Grid layout for perfume cards */
+.perfume-page-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Grid layout for product cards */
+.perfume-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for each product card */
+.perfume-page-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.perfume-page-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product image styling */
+.perfume-page-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Product name and price styling */
+.perfume-page-name {
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+    color: #444;
+    font-weight: normal;
+    text-align: start;
+}
+
+.perfume-page-price {
+    font-size: 13px;
+    margin: 3px 0 10px 10px;
+    color: #777;
+    text-align: start;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .perfume-page-overlay-text {
+        font-size: 1.7rem;
+        width: 50%;
+        /* Make overlay text more centered */
+        left: 5%;
+    }
+
+    .perfume-page-overlay-text h6 {
+        font-size: 2rem;
+    }
+
+    .perfume-page-overlay-text p {
+        font-size: 1.2rem;
+    }
+
+    .perfume-page-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        /* Adjust grid */
+    }
+
+    .perfume-page-name {
+        font-size: 1.2rem;
+    }
+
+    .perfume-page-price {
+        font-size: 1rem;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+    .perfume-page-filterButton {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .perfume-page-filterButton button {
+        width: 180px;
+        height: auto;
+    }
+
+    .perfume-page-filterButton img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .perfume-page-overlay-text {
+        font-size: 1.5rem;
+        width: 70%;
+        left: 15%;
+        bottom: 10%;
+    }
+
+    .perfume-page-overlay-text h6 {
+        font-size: 1.8rem;
+    }
+
+    .perfume-page-overlay-text p {
+        font-size: 1.1rem;
+    }
+
+    .perfume-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfume-page-name {
+        font-size: 1.1rem;
+    }
+
+    .perfume-page-price {
+        font-size: 0.9rem;
+    }
+}
+
+/* Very small screens (Mobile phones) */
+@media (max-width: 600px) {
+
+    .perfume-page-filterButton img,
+    .perfume-page-filterButton p {
+        display: none;
+        /* Hide images and text on small screens */
+    }
+
+    .perfume-page-category-dropdown {
+        display: block;
+        /* Show dropdown */
+    }
+
+    .perfume-page-category-dropdown select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .perfume-page-1,
+    .perfume-page-2 {
+        padding: 10px;
+    }
+
+    .perfume-page-overlay-text {
+        font-size: 1.3rem;
+        left: 5%;
+        width: 90%;
+        bottom: 15%;
+    }
+
+    .perfume-page-overlay-text h6 {
+        font-size: 1.2rem;
+    }
+
+    .perfume-page-overlay-text p {
+        font-size: 1rem;
+    }
+
+    .perfume-page-name {
+        font-size: 1rem;
+    }
+
+    .perfume-page-price {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,135 @@
+/* General container adjustments for responsiveness */
+.men-belts-page-container {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+/* Poster section */
+.men-belts-poster {
+    background: url('https://www.louisvuitton.com/images/is/image/lv/MEN_ACC_BC_LV_MUST_BELTS_02_DI3.jpg?wid=2400') no-repeat center center / cover;
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: end;
+}
+
+.men-belts-overlay-text {
+    position: absolute;
+    width: 30%;
+    left: 5%;
+    bottom: 5%;
+    color: white;
+    text-align: start;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.men-belts-overlay-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.men-belts-overlay-text p {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Products container */
+.men-belts-products-container {
+    padding: 20px;
+}
+
+.men-belts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual product cards */
+.men-belts-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: left;
+}
+
+.men-belts-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product image */
+.men-belts-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Product name */
+.men-belts-name {
+    font-size: 16px;
+    margin: 10px;
+    color: #444;
+    font-weight: normal;
+}
+
+/* Product price */
+.men-belts-price {
+    font-size: 13px;
+    margin: 0 10px 10px;
+    color: #777;
+}
+
+/* Fallback message for no products */
+.men-belts-no-products {
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .men-belts-overlay-text h1 {
+        font-size: 2rem;
+    }
+
+    .men-belts-overlay-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+    .men-belts-overlay-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .men-belts-overlay-text p {
+        font-size: 0.8rem;
+    }
+
+    .men-belts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Very small screens (Mobile phones) */
+@media (max-width: 600px) {
+    .men-belts-overlay-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .men-belts-overlay-text p {
+        font-size: 0.7rem;
+    }
+}

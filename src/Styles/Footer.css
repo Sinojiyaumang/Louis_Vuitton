@@ -1,0 +1,182 @@
+.footer {
+    font-family: "Louis Vuitton N W01 Regular", Arial, sans-serif;
+    background-color: #fff;
+    /* White background */
+    color: black;
+    /* Text color */
+    padding: 80px 80px 40px;
+    /* Top, Left/Right, Bottom */
+    text-align: center;
+}
+
+/* Flex container for footer sections */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* Spacing between sections */
+    flex-wrap: wrap;
+    /* Wrap content on smaller screens */
+}
+
+/* Individual footer section */
+.footer-section {
+    flex: 1 1 45%;
+    /* Flexible width, 45% max */
+    min-width: 300px;
+    /* Ensures readability on small screens */
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: black;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Allow links to wrap */
+    margin-top: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 50px;
+}
+
+.footer-logo p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-image {
+    margin-top: 10px;
+    width: 90px;
+    /* Default size */
+    height: auto;
+}
+
+/* ----- Responsive Breakpoints ----- */
+
+/* For Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 60px 40px;
+        /* Reduce padding */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        /* Stack sections vertically */
+        align-items: center;
+        /* Center align content */
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        /* Full width for sections */
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-logo p {
+        font-size: 1.5rem;
+    }
+
+    .footer-image {
+        width: 80px;
+    }
+}
+
+/* For Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 20px;
+        /* Further reduce padding */
+    }
+
+    .footer-section {
+        font-size: 12px;
+        /* Smaller font for readability */
+    }
+
+    .footer-section h4 {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        /* Stack links vertically */
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-logo p {
+        font-size: 1.3rem;
+    }
+
+    .footer-image {
+        width: 70px;
+    }
+}
+
+/* For Very Small Devices (up to 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 10px;
+        /* Tighten padding for small screens */
+    }
+
+    .footer-section {
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .footer-section h4 {
+        font-size: 11px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .footer-logo p {
+        font-size: 1.1rem;
+    }
+
+    .footer-image {
+        width: 60px;
+        /* Adjust logo size for very small screens */
+    }
+}
