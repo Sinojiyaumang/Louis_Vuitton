@@ -8,6 +8,7 @@ const WomenBags = ({ products }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
+  console.log("dgfhgjhkjl", products)
 
   const [selectedCategory, setSelectedCategory] = useState('');
 
