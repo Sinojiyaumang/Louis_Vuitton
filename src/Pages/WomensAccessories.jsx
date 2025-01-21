@@ -11,7 +11,6 @@ const WomensAccessories = ({ products }) => {
 
   const [selectedCategory, setSelectedCategory] = useState('');
 
-  // Get the category from URL query parameters
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const category = queryParams.get('category');

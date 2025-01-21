@@ -1,9 +1,11 @@
 // cartReducer.js
 const initialState = {
-    items: [],
+    items: JSON.parse(localStorage.getItem("cartItems")) || [],
 };
 
 const cartReducer = (state = initialState, action) => {
+    let updatedItems;
+
     switch (action.type) {
         case "LOAD_CART":
             return {
@@ -11,33 +13,42 @@ const cartReducer = (state = initialState, action) => {
                 items: action.payload,
             };
         case "ADD_TO_CART":
+            updatedItems = [...state.items, action.payload];
+            localStorage.setItem("cartItems", JSON.stringify(updatedItems)); 
             return {
                 ...state,
-                items: [...state.items, action.payload],
+                items: updatedItems,
             };
         case "REMOVE_ITEM_FROM_CART":
+            updatedItems = state.items.filter(item => item.id !== action.payload);
+            localStorage.setItem("cartItems", JSON.stringify(updatedItems)); 
             return {
                 ...state,
-                items: state.items.filter(item => item.id !== action.payload),  // Remove item by id
+                items: updatedItems,
             };
         case "INCREMENT_QUANTITY":
+            updatedItems = state.items.map(item =>
+                item.id === action.payload ? { ...item, quantity: item.quantity + 1 } : item
+            );
+            localStorage.setItem("cartItems", JSON.stringify(updatedItems));
             return {
                 ...state,
-                items: state.items.map(item =>
-                    item.id === action.payload ? { ...item, quantity: item.quantity + 1 } : item
-                ),
+                items: updatedItems,
             };
         case "DECREMENT_QUANTITY":
+            updatedItems = state.items.map(item =>
+                item.id === action.payload ? { ...item, quantity: Math.max(item.quantity - 1, 1) } : item
+            );
+            localStorage.setItem("cartItems", JSON.stringify(updatedItems)); 
             return {
                 ...state,
-                items: state.items.map(item =>
-                    item.id === action.payload ? { ...item, quantity: item.quantity - 1 } : item
-                ),
+                items: updatedItems,
             };
         case "CLEAR_CART":
+            localStorage.setItem("cartItems", JSON.stringify([]));
             return {
                 ...state,
-                items: [],  // Clears all items from the cart
+                items: [], 
             };
         default:
             return state;
