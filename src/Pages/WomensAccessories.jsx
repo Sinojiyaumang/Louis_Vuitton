@@ -19,12 +19,12 @@ const WomensAccessories = ({ products }) => {
 
   const handleFilter = (subcategory) => {
     setSelectedCategory(subcategory);
-    navigate(`?category=${subcategory}`); // Update the URL with the selected category
+    navigate(`?category=${subcategory}`); 
   };
 
   const handleProductClick = (product) => {
     dispatch(setSelectedProduct(product));
-    navigate(`/SingleProduct/${product.id}`); // Navigate to the single product page
+    navigate(`/SingleProduct/${product.id}`);
   };
 
   const categoryPosters = {
